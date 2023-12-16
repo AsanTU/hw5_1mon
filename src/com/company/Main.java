@@ -1,24 +1,23 @@
 package com.company;
-public class Main {
-    public static void main(String[] args){
-        Boss boss = new Boss();
-        boss.setBossDefence("Physical");
-        boss.setDamage(70);
-        boss.setHealth(1000);
 
-        System.out.println("Boss Health: " + boss.getHealth() + "\n boss damage:" + boss.getDamage() + "\n type of boss defence" + boss.getBossDefence());
-        for (int i = 0; i < createHeroas().length; i++) {
-            System.out.println(createHeroas()[i].getHealth() + "," + createHeroas()[i].getDamage());
-        }
+public class Main {
+    public static void main(String[] args) {
+        Boss boss = new Boss();
+        boss.setHealth(1000);
+        boss.setDamage(50);
+        boss.setBossDefence("Physik");
+
+        Hero[] heroes = createHeroes();
+        for (Hero hero : heroes)
+            System.out.println("Health: " + hero.getHealth() + "Damage: " + hero.getDamage() + "Superpower: " + hero.getAbility());
     }
-    private static Hero[] createHeroas(){
-        Hero physical = new Hero(250,40);
-        Hero magic = new Hero(150,30);
-        Hero asan = new Hero(300,60);
-        Hero[] superHero = {
-                physical, magic, asan
-        };
-         return superHero;
+
+    public static Hero[] createHeroes() {
+        Hero hero1 = new Hero(100, 20);
+        Hero hero2 = new Hero(120, 25);
+        Hero hero3 = new Hero(80, 18);
+
+        return new Hero[]{hero1, hero2, hero3};
     }
 
 }

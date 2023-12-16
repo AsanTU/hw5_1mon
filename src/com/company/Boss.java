@@ -3,6 +3,15 @@ package com.company;
 public class Boss {
     private int health;
     private int damage;
+
+    public String getBossDefence() {
+        return bossDefence;
+    }
+
+    public void setBossDefence(String bossDefence) {
+        this.bossDefence = bossDefence;
+    }
+
     private String bossDefence;
 
     public int getHealth() {
@@ -19,13 +28,5 @@ public class Boss {
 
     public void setDamage(int damage) {
         this.damage = damage;
-    }
-
-    public String getBossDefence() {
-        return bossDefence;
-    }
-
-    public void setBossDefence(String bossDefence) {
-        this.bossDefence = bossDefence;
     }
 }
